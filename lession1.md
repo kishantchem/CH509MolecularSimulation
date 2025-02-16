@@ -109,4 +109,92 @@ This is the **Boltzmann factor**, showing that **higher-energy states are expone
 - [Boltzmann Distribution (Wikipedia)](https://en.wikipedia.org/wiki/Boltzmann_distribution)
 - [Statistical Mechanics by K. Huang](https://en.wikipedia.org/wiki/Kerson_Huang)
 
+# The Boltzmann Distribution in a Larger System
+
+## Extending the Fundamental Assumption of Statistical Mechanics  
+
+The **fundamental assumption of statistical mechanics** states:  
+
+> *In an isolated system at equilibrium, all accessible microstates are equally probable.*
+
+For a small system in contact with a reservoir, we showed that the **Boltzmann factor** arises naturally. Now, let’s extend this to a **larger system with multiple energy levels**.
+
+---
+
+## Example: Multi-Level System in Contact with a Large Reservoir
+
+### System & Reservoir Setup
+
+Consider a system $S$ in thermal equilibrium with a large heat reservoir $R$. The system can now occupy multiple discrete energy states:
+
+$$
+E_S = \{ E_1, E_2, E_3, ..., E_n \}
+$$
+
+The **total energy** is conserved:
+
+$$
+E_{\text{total}} = E_S + E_R
+$$
+
+Since the system exchanges energy with the reservoir, the probability of being in a specific energy state depends on the number of available microstates in the reservoir.
+
+### Microstates & Probability Connection  
+
+As before, the probability of the system being in a particular energy state is proportional to the number of microstates available to the reservoir:
+
+$$
+P(E_i) \propto \Omega_R(E_{\text{total}} - E_i)
+$$
+
+Using entropy $S_R = k_B \ln \Omega_R$ and expanding via a **Taylor series**:
+
+$$
+S_R(E_{\text{total}} - E_i) \approx S_R(E_{\text{total}}) - \frac{E_i}{T}
+$$
+
+we obtain:
+
+$$
+P(E_i) \propto e^{-E_i / k_B T}
+$$
+
+which generalizes the **Boltzmann factor** to multiple states:
+
+$$
+P(E_i) = \frac{e^{-E_i / k_B T}}{Z}
+$$
+
+where **Z is the partition function**, defined as:
+
+$$
+Z = \sum_{i} e^{-E_i / k_B T}
+$$
+
+This normalization ensures that probabilities sum to 1.
+
+---
+
+## Physical Interpretation
+- The **partition function** acts as a normalization factor that sums over all possible states.
+- **Lower-energy states are exponentially more probable** than higher-energy states at a given temperature.
+- The probability distribution follows the **Boltzmann distribution**:
+
+  $$ P(E_i) = \frac{e^{-E_i / k_B T}}{Z} $$
+
+- In the **limit of a large system**, this approach forms the foundation for **statistical mechanics and thermodynamics**.
+
+---
+
+## Key Takeaways
+✅ **The partition function encodes all equilibrium properties of a system**.  
+✅ **The probability of a state depends on its energy and temperature**.  
+✅ **This principle extends to large systems, molecular dynamics, and Monte Carlo simulations**.  
+
+---
+
+### **Further Reading**
+- [Partition Function (Wikipedia)](https://en.wikipedia.org/wiki/Partition_function_(statistical_mechanics))
+- [Statistical Mechanics by K. Huang](https://en.wikipedia.org/wiki/Kerson_Huang)
+
 
