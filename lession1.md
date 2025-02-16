@@ -385,10 +385,7 @@ By performing **trial moves** and applying the Metropolis acceptance criterion, 
 ---
 
 ## Key Takeaways
-✅ The **Metropolis algorithm** efficiently samples states according to the **Boltzmann distribution**.
-✅ It ensures **detailed balance** and **ergodicity** in Monte Carlo simulations.
-✅ Used extensively in **molecular simulations** and **statistical mechanics**.
+✅ The **Metropolis algorithm** efficiently samples states according to the **Boltzmann distribution**.✅ It ensures **detailed balance** and **ergodicity** in Monte Carlo simulations.✅ Used extensively in **molecular simulations** and **statistical mechanics**.
 
 Would you like a Python implementation of the **Metropolis Monte Carlo method**? 🚀
-
 
