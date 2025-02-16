@@ -200,118 +200,118 @@ This normalization ensures that probabilities sum to 1.
 - [Partition Function (Wikipedia)](https://en.wikipedia.org/wiki/Partition_function_(statistical_mechanics))
 - [Statistical Mechanics by K. Huang](https://en.wikipedia.org/wiki/Kerson_Huang)
 
-# **Many-Particle, Many-State System in Contact with a Heat Reservoir**  
+# Many-Particle, Many-State System in Contact with a Heat Reservoir
 
 Now, let’s generalize our understanding to a system containing **many particles**, where each particle can occupy **multiple energy states**. This scenario is relevant in both quantum and classical systems, such as **electrons in atoms** or **molecular energy levels**.
 
 ---
 
-## **System Setup: N Particles with Multiple Energy States**
+## System Setup: N Particles with Multiple Energy States
 We consider a system of \( N \) **independent particles** in **thermal equilibrium** with a large heat reservoir at temperature \( T \). Each particle can occupy one of several discrete energy levels:
 
-\[
+$$
 E_0, E_1, E_2, ..., E_i, ...
-\]
+$$
 
 The system is in thermal contact with a **large heat reservoir**, which ensures energy exchange while maintaining a constant temperature. The **total energy** of the combined system (system + reservoir) remains fixed:
 
-\[
+$$
 E_{\text{total}} = E_S + E_R
-\]
+$$
 
 where \( E_S \) is the system’s energy, and \( E_R \) is the reservoir’s energy.
 
 ---
 
-## **Step 1: Probability of a System Configuration Based on Reservoir Microstates**
+## Step 1: Probability of a System Configuration Based on Reservoir Microstates
 The system’s probability of being in a particular configuration depends on the **number of microstates of the reservoir** at energy \( E_R \). According to the **fundamental assumption of statistical mechanics**, the probability of the system being in a state with energy \( E_S \) is proportional to the number of ways the reservoir can arrange itself at \( E_R \):
 
-\[
+$$
 P(E_S) \propto \Omega_R(E_R)
-\]
+$$
 
 where \( \Omega_R(E_R) \) represents the reservoir’s microstates at energy \( E_R \). Since the entropy of the reservoir is defined as:
 
-\[
+$$
 S_R = k_B \ln \Omega_R
-\]
+$$
 
 we express the probability as:
 
-\[
+$$
 P(E_S) \propto e^{S_R(E_R) / k_B}
-\]
+$$
 
 Using a **Taylor series expansion** around \( E_{\text{total}} \):
 
-\[
+$$
 S_R(E_R) = S_R(E_{\text{total}} - E_S) \approx S_R(E_{\text{total}}) - \frac{E_S}{T}
-\]
+$$
 
 we substitute into the probability expression:
 
-\[
+$$
 P(E_S) \propto e^{(S_R(E_{\text{total}}) - E_S / T) / k_B}
-\]
+$$
 
-\[
+$$
 P(E_S) \propto e^{S_R(E_{\text{total}}) / k_B} e^{-E_S / k_B T}
-\]
+$$
 
 Since \( e^{S_R(E_{\text{total}}) / k_B} \) is a normalization constant, we obtain the **Boltzmann distribution**:
 
-\[
+$$
 P(E_S) = \frac{e^{-E_S / k_B T}}{Z}
-\]
+$$
 
 where \( Z \), the **partition function**, ensures proper normalization:
 
-\[
+$$
 Z = \sum_{\text{all states}} e^{-E / k_B T}
-\]
+$$
 
 This result shows that **higher-energy configurations are exponentially less probable**.
 
 ---
 
-## **Step 2: Distributing Particles Among Energy States**
+## Step 2: Distributing Particles Among Energy States
 Each of the \( N \) particles is independent and can occupy different energy levels. We define:
 - \( n_i \) as the number of particles in state \( i \) with energy \( E_i \).
 - The total number of particles:
 
-  \[
+  $$
   \sum_i n_i = N
-  \]
+  $$
 
 - The system’s total energy:
 
-  \[
+  $$
   E_S = \sum_i n_i E_i
-  \]
+  $$
 
 The number of ways to distribute \( N \) particles among available states follows the **multiplicity formula**:
 
-\[
+$$
 \Omega(N) = \frac{N!}{\prod_i n_i!}
-\]
+$$
 
 Since each configuration has probability \( P(E_S) \), the probability of a particular distribution \( \{n_i\} \) is:
 
-\[
+$$
 P(\{n_i\}) \propto e^{-\sum_i n_i E_i / k_B T} \cdot \frac{N!}{\prod_i n_i!}
-\]
+$$
 
 Applying **Stirling’s approximation** (\( \ln N! \approx N \ln N - N \)), we derive the **most probable particle distribution**, leading to the well-known **Maxwell-Boltzmann distribution**:
 
-\[
+$$
 n_i = N \frac{e^{-E_i / k_B T}}{Z}
-\]
+$$
 
 This result states that the **fraction of particles in state \( E_i \) follows the Boltzmann factor**.
 
 ---
 
-## **Step 3: Physical Interpretation**
+## Step 3: Physical Interpretation
 1. **More particles occupy lower energy states** because this leaves more microstates available to the reservoir.
 2. **Higher-energy states are exponentially suppressed** due to fewer accessible microstates.
 3. **The probability of a state depends on both its energy and temperature**:
@@ -320,9 +320,11 @@ This result states that the **fraction of particles in state \( E_i \) follows t
 
 ---
 
-## **Key Takeaways**
+## Key Takeaways
 ✅ **Probability of a system state is related to the number of reservoir microstates**.  
 ✅ **Higher-energy configurations are exponentially less probable**.  
 ✅ **The Maxwell-Boltzmann distribution emerges from this framework**.  
 
 Would you like to explore interacting particle systems, such as the **Ising model or Bose-Einstein statistics**? 🚀
+
+
