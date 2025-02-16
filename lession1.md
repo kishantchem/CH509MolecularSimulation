@@ -340,15 +340,15 @@ Given a system with an **energy function** \( E(x) \), where \( x \) represents 
 1. **Start with an initial configuration** \( x \).
 2. **Generate a trial move** \( x' \) by randomly perturbing the system (e.g., moving a particle).
 3. **Calculate the energy difference**:
-   \[
+   $$
    \Delta E = E(x') - E(x)
-   \]
+   $$
 4. **Apply the Metropolis acceptance criterion**:
    - If \( \Delta E \leq 0 \) (i.e., the new state has lower energy), accept the move: \( x \to x' \).
    - If \( \Delta E > 0 \) (i.e., the new state has higher energy), accept with probability:
-     \[
+     $$
      P_{\text{accept}} = e^{-\Delta E / k_B T}
-     \]
+     $$
    - Generate a random number \( r \in [0,1] \). If \( r < P_{\text{accept}} \), accept \( x' \); otherwise, reject it and keep \( x \).
 5. **Repeat the process** for many iterations to explore the configuration space.
 
@@ -369,9 +369,9 @@ In the **canonical ensemble**, the system:
 
 The **Metropolis algorithm** samples configurations from the **canonical partition function**:
 
-\[
+$$
 Z = \sum_{\text{all states}} e^{-E / k_B T}
-\]
+$$
 
 By performing **trial moves** and applying the Metropolis acceptance criterion, the simulation generates equilibrium configurations **weighted by the Boltzmann factor**.
 
